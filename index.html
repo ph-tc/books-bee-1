@@ -8,7 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="format-detection" content="telephone=no">
-	<title>Книги</title>
+	<title>КнигиОнлайн</title>
 	<style>
 		@font-face {
 			font-family: 'Open Sans';
@@ -171,7 +171,6 @@
 		.header .name span {
 			position: relative;
 			display: inline-block;
-			padding-left: 45px;
 			font-family: 'Arsenal', sans-serif;
 			font-size: 30px;
 			font-weight: 600;
@@ -180,11 +179,21 @@
 			text-transform: uppercase;
 		}
 
-		.header .name span::before {
+		.header .name span:first-child {
+			padding-left: 45px;
+		}
+
+		.header .name span:last-child {
+			color: #be5b04;
+		}
+
+		.header .name span:first-child::before {
 			content: '';
 			position: absolute;
 			top: 50%;
 			left: 0;
+			-webkit-transform: translateY(-47%);
+			-ms-transform: translateY(-47%);
 			transform: translateY(-47%);
 			display: block;
 			width: 40px;
@@ -274,6 +283,7 @@
 			padding: 7px 10px 10px;
 			font-size: 16px;
 			border: 1px solid #ccc;
+			-webkit-border-radius: 10px;
 			border-radius: 10px;
 			background-color: #fff;
 		}
@@ -282,6 +292,8 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
 			transform: translate(-50%, -50%);
 			padding-left: 30px;
 			color: #aaa;
@@ -292,6 +304,8 @@
 			position: absolute;
 			top: 50%;
 			left: 0;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
 			transform: translateY(-50%);
 			display: block;
 			width: 20px;
@@ -308,14 +322,14 @@
 				display: none;
 			}
 		}
-		
+
 		/*HEADING*/
 
 		.heading {
 			margin-top: 10px;
 			text-align: center;
 		}
-		
+
 		.heading span {
 			color: #555;
 			font-size: 14px;
@@ -339,6 +353,7 @@
 			padding: 7px 10px 10px;
 			color: #444;
 			border: 1px solid #ccc;
+			-webkit-border-radius: 10px;
 			border-radius: 10px;
 			background-color: #fff;
 		}
@@ -347,6 +362,8 @@
 			position: absolute;
 			top: 50%;
 			right: 20px;
+			-webkit-transform: translateY(-50%) rotate(180deg);
+			-ms-transform: translateY(-50%) rotate(180deg);
 			transform: translateY(-50%) rotate(180deg);
 			width: 14px;
 			height: 14px;
@@ -388,7 +405,7 @@
 		}
 
 		/*RECOMMENDATIONS*/
-		
+
 		.recommendations {
 			display: table-row;
 		}
@@ -399,7 +416,7 @@
 			height: 100%;
 			table-layout: fixed;
 		}
-		
+
 		.recommendations .book {
 			display: table-cell;
 			width: 50%;
@@ -417,7 +434,11 @@
 			width: 80%;
 			height: 18vh;
 			margin-bottom: 5px;
+			background-image: -webkit-gradient(linear, left top, right bottom, color-stop(30%, #ccc), to(#777));
+			background-image: -webkit-linear-gradient(top left, #ccc 30%, #777);
+			background-image: -o-linear-gradient(top left, #ccc 30%, #777);
 			background-image: linear-gradient(to bottom right, #ccc 30%, #777);
+			-webkit-border-radius: 3px;
 			border-radius: 3px;
 			overflow: hidden;
 		}
@@ -433,6 +454,7 @@
 			border: 15px solid #ddd;
 			border-top-color: #f7f7f7;
 			border-left-color: #f7f7f7;
+			-webkit-box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.7);
 			box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.7);
 		}
 
@@ -506,6 +528,7 @@
 			text-transform: uppercase;
 			background-color: #fff;
 			border: 1px solid #ccc;
+			-webkit-border-radius: 10px;
 			border-radius: 10px;
 		}
 
@@ -651,7 +674,7 @@
 <div class="header">
 	<div class="inner blured">
 		<div class="name">
-			<span>Книги</span>
+			<span>Книги</span><span>Онлайн</span>
 		</div>
 		<div class="plus18">
 			<div></div>
